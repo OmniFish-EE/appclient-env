@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/application_10.xsd"
+             version="10"
+>
+    <display-name>test appclient ear</display-name>
+    
+    <module>
+        <java>client-main.jar</java>
+    </module>
+    <module>
+        <web>
+            <web-uri>client-web.war</web-uri>
+            <context-root>/client-web</context-root>
+        </web>
+    </module>
+    
+    <env-entry>
+        <env-entry-name>java:app/env/myString</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>myString</env-entry-value>
+    </env-entry>
+</application>
